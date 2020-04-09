@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.LiveDataCard {
+    margin: 0.5rem 1rem;
+    /* top: 87px;
+    left: 35px; */
+    width: 232px;
+    height: 116px; 
+    box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+    opacity: 1;
+    /* padding: 1rem 2rem; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center ;
+    flex-basis: 1;
+}
+.DataBox {
+    margin-top: 1.4rem;
+}
+
+.CaseName {
+    top: 119px;
+    left: 60px;
+    text-align: left;
+    font: Medium 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #52586A;
+    opacity: 1;
+    display: inline;
+    padding-right: 5px;
+}
+.CaseNumber {
+    text-align: left;
+    font: bold 24px/29px Montserrat;
+    letter-spacing: 0px;
+    color: #30313A;
+    opacity: 1;
+}
+
+
+
+.Graph {
+    width: 72px;
+    height: 54px;
+    padding-left: 15px;
+}
