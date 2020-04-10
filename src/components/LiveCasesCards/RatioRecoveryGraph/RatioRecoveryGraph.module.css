@@ -1,0 +1,36 @@
+.RatioRecoveryGraph {
+    width: 289px;
+    height: 320px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+    opacity: 1;
+    margin-top: 0.5rem ;
+    box-sizing: border-box;
+}
+
+.RatioRecoveryGraph h4 {
+    text-align: center;
+    font: SemiBold 18px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #30313A;
+}
+
+.RatioRecoveryGraph img {
+    opacity: 1;
+    position: relative;
+}
+.RatioRecoveryGraph p {
+    font: Medium 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #52586A;
+    opacity: 1;
+    font-size: 0.9rem;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.ProgressBar {
+    width: 189px;
+    height: 189px;
+}

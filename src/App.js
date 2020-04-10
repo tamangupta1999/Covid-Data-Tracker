@@ -4,6 +4,7 @@ import classes from'./App.module.css';
 import {BrowserRouter} from 'react-router-dom';
 import AppLayout from './hoc/AppLayout/AppLayout';
 import LiveCasesData from './containers/LiveCasesData/LiveCasesData';
+import CountriesData from './containers/CountriesData/CountriesData';
 
 
 const App = (props) =>{
@@ -11,7 +12,8 @@ const App = (props) =>{
     <div className={classes.App}>
       <BrowserRouter>
       <AppLayout>
-        <LiveCasesData />
+       <LiveCasesData />
+       <CountriesData />
       </AppLayout>
       </BrowserRouter>
     </div>
