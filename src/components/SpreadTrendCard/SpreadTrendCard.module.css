@@ -1,0 +1,25 @@
+.SpreadTrendCard {
+    width: 484px;
+    height: 210px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+    position: relative;
+    top: -160px;
+    left: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.Heading {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: space-between  ;
+    padding: 10px 20px;
+}
+.Heading h4 {
+    font: SemiBold 18px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #30313A;
+}

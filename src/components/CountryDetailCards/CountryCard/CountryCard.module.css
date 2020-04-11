@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-around ;
     box-sizing: border-box;
+    border-radius: 1.2rem;
+    box-shadow: 1px 1px 2px #ccc;
+    margin: 6px;
 }
 
 .CountryCard img {

@@ -17,6 +17,7 @@ const CountryDetailCards = (props) => {
                    totalCases={country.cases/1000}
                    recovered={country.recovered/1000}
                    key={country.country}
+                   click={()=>props.countryFullData(country)}
                    />
                })
            )
@@ -31,6 +32,7 @@ const CountryDetailCards = (props) => {
                 totalCases={country.cases/1000}
                 recovered={country.recovered/1000}
                 key={country.country}
+                click={()=>props.countryFullData(country)}
                 />
             })
         )

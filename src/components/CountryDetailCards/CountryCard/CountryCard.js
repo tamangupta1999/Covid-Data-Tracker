@@ -19,7 +19,7 @@ const countryCard = (props) => {
         recover = `${props.recovered.toFixed(1)}k`
     }
     return (
-        <div className={classes.CountryCard}>
+        <div className={classes.CountryCard} onClick={props.click}>
             <div>
                 <img src={props.flag} alt={props.country} />
                 <p className={classes.CountryName}>{props.country}</p>

@@ -1,0 +1,41 @@
+.WorldGeographicalCard {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.CardHeading {
+    display: flex;
+    align-items: center;
+}
+.WorldGeographicalCard h4 {
+    font: SemiBold 16px/19px Montserrat;
+    color: #30313A;
+    display: inline-block;
+    margin-right: 45px;
+    margin-left: 15px;
+}
+
+.Most {
+    width: 14px;
+    height: 14px;
+    background: #FF0019 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    display: inline-block;
+    margin-right: 5px;
+}
+.Less {
+    width: 14px;
+    height: 14px;
+    background: #FFC4C6 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    display: inline-block;
+    margin-right: 5px;
+}
+.CardHeading p {
+    font: Regular 12px/14px Montserrat;
+    letter-spacing: 0px;
+    color: #52586A;
+    margin: 0 10px;
+}

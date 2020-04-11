@@ -3,8 +3,7 @@ import classes from'./App.module.css';
 
 import {BrowserRouter} from 'react-router-dom';
 import AppLayout from './hoc/AppLayout/AppLayout';
-import LiveCasesData from './containers/LiveCasesData/LiveCasesData';
-import CountriesData from './containers/CountriesData/CountriesData';
+import LiveCasesData from './containers/WorldCasesData/WorldCasesData';
 
 
 const App = (props) =>{
@@ -13,7 +12,6 @@ const App = (props) =>{
       <BrowserRouter>
       <AppLayout>
        <LiveCasesData />
-       <CountriesData />
       </AppLayout>
       </BrowserRouter>
     </div>
