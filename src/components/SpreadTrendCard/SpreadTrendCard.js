@@ -10,6 +10,8 @@ const SpreadTrendCard = (props) => {
     let date = new Date();
     const [graph, setGraph] = useState({});
     const [addFunctionality, setAddFunctionality] = useState({});
+
+
     const onConfirmedHandler = () => {
         let currentDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
         graphData = {
@@ -19,7 +21,7 @@ const SpreadTrendCard = (props) => {
             "2020-03-30": 634000
         };
         graphData[currentDate] = worldData.cases
-        setAddFunctionality({colors:["#b00","#666"]});
+        setAddFunctionality({ colors: ["#b00", "#666"] });
         return setGraph(graphData);
     }
 
@@ -32,7 +34,8 @@ const SpreadTrendCard = (props) => {
             "2020-03-30": 150000
         };
         graphData[currentDate] = worldData.recovered;
-        setAddFunctionality({colors:["#32CD32","#006400"]});
+        setAddFunctionality({ colors: ["#32CD32", "#006400"] });
+
         return setGraph(graphData);
     }
     const onDeathHandler = () => {
@@ -45,7 +48,7 @@ const SpreadTrendCard = (props) => {
             "2020-03-30": 37783
         };
         graphData[currentDate] = worldData.deaths;
-        setAddFunctionality({colors:["#b00","#006400"]});
+        setAddFunctionality({ colors: ["#b00", "#006400"] });
         return setGraph(graphData);
     }
 
@@ -54,9 +57,9 @@ const SpreadTrendCard = (props) => {
             <div className={classes.Heading}>
                 <h4>Spread Trends</h4>
                 <div>
-                    <Button btnType="Dark"  click={onConfirmedHandler}>Confirmed</Button>
-                    <Button btnType="Light" click={onRecoveredHandler}>Recovered</Button>
-                    <Button btnType="Light" click={onDeathHandler}>Deaths</Button>
+                    <Button btnType={"Dark"} click={onConfirmedHandler}>Confirmed</Button>
+                    <Button btnType={"Light"} click={onRecoveredHandler}>Recovered</Button>
+                    <Button btnType={"Light"} click={onDeathHandler}>Deaths</Button>
                 </div>
             </div>
             <SpreadTrendGraph graphData={graph} additionalFun={addFunctionality} />

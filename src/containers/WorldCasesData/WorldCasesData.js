@@ -8,6 +8,8 @@ import CountryDetailCard from '../../components/CountryDetailCards/CountryDetail
 import Search from '../../components/UI/Search/Search';
 import WorldGeographicalCard from '../../components/WorldGeographicalCard/WorldGeographicalCard';
 import SpreadTrendCard from '../../components/SpreadTrendCard/SpreadTrendCard';
+import NewsFeedsCard from './../../components/NewsFeedsCard/NewsFeedsCard';
+import LatestTweetsCard from '../../components/LatestTweetsCard/LatestTweetsCard';
 
 const LiveCasesData = () => {
     const [totalCases, settotalCases] = useState(0);
@@ -70,7 +72,11 @@ const LiveCasesData = () => {
                    <WorldGeographicalCard />
                 </div>
             </div>
+           <div className={classes.NewsSpreadTrend}>
            {spreadTrend}
+           <NewsFeedsCard  />
+           <LatestTweetsCard />
+           </div>
         </React.Fragment>
     );
 }

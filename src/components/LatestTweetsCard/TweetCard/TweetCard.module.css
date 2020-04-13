@@ -1,0 +1,46 @@
+.TweetCard {
+    width: 267px;
+    height: 145px;
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    flex-direction: column;
+    padding: 12px 8px;
+}
+
+.TweetImage {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.TweetHeading {
+    display: flex;
+}
+
+.TweetData {
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #252525;
+}
+
+.Likes {
+    font-size: 11px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.7;
+    color: #252525;
+    margin-left: 4px;
+    margin-right: 15px;
+}
+.UserHeading {
+    font-size: 15px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+.UserId {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}

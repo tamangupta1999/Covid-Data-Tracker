@@ -6,7 +6,6 @@
     top: -180px;
     margin-left: 20px;
     border-radius: 5px;
-
 }
 
 .WorldMapCard {
@@ -22,3 +21,7 @@
     border-radius: 8px;
     top: -180px;
 }
+
+.NewsSpreadTrend {
+    display: flex;
+} 
