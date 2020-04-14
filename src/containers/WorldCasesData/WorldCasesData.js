@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import LiveCasesCards from '../../components/WorldCasesCards/WorldCasesCards';
+import WorldCasesCard from '../../components/WorldCasesCards/WorldCasesCards';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import classes from './WorldCasesData.module.css';
 
+import RatioRecoveryGraph from '../../components/RatioRecoveryGraph/RatioRecoveryGraph';
 import CountryDetailCard from '../../components/CountryDetailCards/CountryDetailCard';
 import Search from '../../components/UI/Search/Search';
 import WorldGeographicalCard from '../../components/WorldGeographicalCard/WorldGeographicalCard';
@@ -21,8 +22,13 @@ const LiveCasesData = () => {
     const [worldData, setWorldData] = useState([]);
 
     const searchCountry = useCallback((result) => {
+        console.log(result)
         setCountries(result);
     }, [])
+
+    let ratioOfRecoveryCases = (totalCase, recovoredCase) => {
+        return (recovoredCase / totalCase) * 100;
+    }
 
     const countryFullData = (countryName) => {
         settotalCases(countryName.cases);
@@ -48,36 +54,40 @@ const LiveCasesData = () => {
     let liveCasesRecord = <Spinner />;
     let spreadTrend = <Spinner />
     if (!loading) {
-        liveCasesRecord = (<LiveCasesCards totalCases={totalCases}
+        liveCasesRecord = (<WorldCasesCard totalCases={totalCases}
             recovered={recovered}
             activeCase={activeCases}
             totalDeath={totalDeaths} />)
-        
     }
-    if(!loading) {
-        spreadTrend =  <SpreadTrendCard worldData={worldData}/>
+    if (!loading) {
+        spreadTrend = <SpreadTrendCard worldData={worldData} />
     }
 
     return (
-        <React.Fragment>
-            <div>
-                {liveCasesRecord}
-            </div>
-            <div className={classes.WorldMapCard}>
-                <div className={classes.WorldCasesData}>
-                    <Search onSearchCountry={searchCountry} />
-                    <CountryDetailCard countries={countries} countryFullData={countryFullData}/>
+        <main className={classes.WorldCasesData}>
+            <div className={classes.ContainerOne}>
+                <div className={classes.FirstRow}>
+                    {liveCasesRecord}
                 </div>
-                <div className={classes.WorldGeographical}>
-                   <WorldGeographicalCard />
+                <div className={classes.SecondRow}>
+                    <div className={classes.WorldCasesCard}>
+                        <Search onSearchCountry={searchCountry} />
+                        <CountryDetailCard countries={countries} countryFullData={countryFullData} />
+                    </div>
+                    <WorldGeographicalCard />
+                </div>
+                <div className={classes.ThirdRow}>
+                    {spreadTrend}
+                    <NewsFeedsCard />
                 </div>
             </div>
-           <div className={classes.NewsSpreadTrend}>
-           {spreadTrend}
-           <NewsFeedsCard  />
-           <LatestTweetsCard />
-           </div>
-        </React.Fragment>
+            <div className={classes.ContainerTwo}>
+                <RatioRecoveryGraph ratioOfRecoveryCases={ratioOfRecoveryCases(+totalCases, +recovered)}
+                    totalCases={+totalCases / 1000}
+                    recovered={+recovered / 1000} />
+                <LatestTweetsCard />
+            </div>
+        </main>
     );
 }
 

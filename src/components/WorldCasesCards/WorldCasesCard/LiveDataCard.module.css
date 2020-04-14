@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .LiveDataCard {
-    margin: 0.5rem 1rem;
-    /* top: 87px;
-    left: 35px; */
+    margin: 0.5rem 0.5rem;
     width: 232px;
     height: 116px; 
     box-shadow: 0px 5px 20px #1425401A;
     border-radius: 8px;
     opacity: 1;
-    /* padding: 1rem 2rem; */
     box-sizing: border-box;
     display: flex;
     justify-content: space-evenly;
@@ -38,11 +35,14 @@
     color: #30313A;
     opacity: 1;
 }
-
-
-
 .Graph {
     width: 72px;
     height: 54px;
     padding-left: 15px;
+}
+
+@media (max-width : 500px ) {
+    .LiveDataCard {
+        width: 140%;
+    }
 }

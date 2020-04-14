@@ -17,10 +17,10 @@ const LatestTweetsCard = (props) => {
             icon : WhoIcon,
             tweetName : "World Health Organization",
             tweetId: "@who",
-            tweetData : `I bow to those martyrs who were 
-                killed mercilessly in Jallianwala Bagh on this day. 
-                We will never forget their courage and sacrifice.
-                 Their valour will inspire Indians for the years to come.`,
+            tweetData : `Working from home with your children around?
+            Your kids are bored and want to play outside but they can't?
+            
+            NOT EASY for any of us!`,
                  likeIcon: LikeIcon,
                  shareIcon: ShareIcon,
                  likes: "80.4k",
@@ -43,10 +43,9 @@ const LatestTweetsCard = (props) => {
             icon : TrumpIcon,
             tweetName : "Donald J. Trump",
             tweetId: "@who",
-            tweetData : `Working from home with your children around?
-            Your kids are bored and want to play outside but they can't?
-            
-            NOT EASY for any of us!`,
+            tweetData : `I am working hard to expose the corruption 
+            and dishonesty in the Lamestream Media. 
+            That part is easy, the hard part is WHY?`,
                  likeIcon: LikeIcon,
                  shareIcon: ShareIcon,
                  likes: "74.9k",

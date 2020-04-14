@@ -1,9 +1,12 @@
+.SearchIcon {
+    padding-left: 20px;
+}
 .Search {
     position: relative;
-    margin-left: 15px;
+    z-index: 500;
 }
 .Search input[type="text"] {
-        width: 90%;
+        width: 95%;
         border: 1.5px solid #ccc;
         border-radius: 1.2rem;
         margin: 8px 0;

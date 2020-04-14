@@ -1,0 +1,40 @@
+.FAQ {
+    padding: 1rem;
+}
+.FaqHeading {
+    text-align: center;
+    border-bottom: 2px solid navy;
+    padding-bottom: 10px;
+
+}
+.FaqData {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between  ;
+}
+.PicOne {
+    width: 400px;
+    border-radius: 8px;
+}
+
+.Poster {
+    width: 97%;
+}
+
+@media (max-width: 500px) {
+    .FaqData {
+        flex-direction: column-reverse;
+    }
+    .PicOne {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .FaqData {
+        flex-direction: column-reverse;
+    }
+    .PicOne {
+        width: 100%;
+    }
+}

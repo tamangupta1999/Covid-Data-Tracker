@@ -9,7 +9,7 @@ import 'react-circular-progressbar/dist/styles.css';
 const RatioRecoveryGraph = (props) =>{
     return (
         <div className={classes.RatioRecoveryGraph}>
-            <h4>Ratio Of Recovery</h4>
+            <h4 className={classes.RecoveryHeading}>Ratio Of Recovery</h4>
             <CircularProgressbarWithChildren  className={classes.ProgressBar} value={props.ratioOfRecoveryCases} text={`${props.ratioOfRecoveryCases.toFixed(1)}%`} 
              styles={buildStyles({
                 textSize: '0.8rem',
@@ -22,11 +22,11 @@ const RatioRecoveryGraph = (props) =>{
               })}
             >
             </CircularProgressbarWithChildren>
-            <p>
+            <p className={classes.InfectedData}>
                 <span>{`${props.totalCases.toFixed(1)}k`} Affected</span>&nbsp;|&nbsp;<span>{`${props.recovered.toFixed(1)}k`} Recovered</span>
             </p>
         </div>
     )
 }
 
-export default RatioRecoveryGraph
+export default RatioRecoveryGraph;

@@ -1,0 +1,23 @@
+.QACard {
+    margin: 0.4rem;
+    padding: 0.2rem 1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 3px #ccc;
+}
+.QHeading {
+    color: blue;
+}
+.QHeading:hover {
+    color: black;
+    cursor: pointer;
+}
+.Ques {
+    color:red;
+    padding-right: 8px;
+}
+
+.Ans {
+    color: green;
+    padding-right: 8px;
+}

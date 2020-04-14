@@ -10,7 +10,7 @@ const Search = (props) => {
     useEffect(() => {
         setTimeout(() => {
             let country = search;
-            // let onLoadCountry = [];
+
             axios.get(`https://corona.lmao.ninja/countries/${country}`).then(response => {
                 let data = response.data;
                 onSearchCountry(data)
@@ -22,9 +22,11 @@ const Search = (props) => {
 
     }, [search, onSearchCountry])
     return (
-        <div className={classes.Search}>
+        <div className={classes.SearchIcon}>
+            <div className={classes.Search}>
             <input type="text" placeholder="Search" value={search} onChange={event => setSearch(event.target.value)} />
             <img src={SearchIcon} alt='searchIcon' />
+        </div>
         </div>
     )
 }

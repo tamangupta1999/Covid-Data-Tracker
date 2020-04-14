@@ -57,7 +57,7 @@ const SpreadTrendCard = (props) => {
             <div className={classes.Heading}>
                 <h4>Spread Trends</h4>
                 <div>
-                    <Button btnType={"Dark"} click={onConfirmedHandler}>Confirmed</Button>
+                    <Button btnType={"Light"} click={onConfirmedHandler}>Confirmed</Button>
                     <Button btnType={"Light"} click={onRecoveredHandler}>Recovered</Button>
                     <Button btnType={"Light"} click={onDeathHandler}>Deaths</Button>
                 </div>

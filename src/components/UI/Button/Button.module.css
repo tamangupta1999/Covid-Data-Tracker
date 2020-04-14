@@ -9,13 +9,15 @@
     margin-right: 4px;
 }
 
-.Dark {
-    font: Medium 12px/15px Montserrat;
-    background: #52586A 0% 0% no-repeat padding-box;
-    color: #FFFFFF;
-}
 .Light {
     color: #30313A;
     background: #F5F5F5 0% 0% no-repeat padding-box;
     font: Medium 12px/15px Montserrat;
+}
+
+
+.Button:active,
+.Button:hover{
+    background: #52586A 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
 }

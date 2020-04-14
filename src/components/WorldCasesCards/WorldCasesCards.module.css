@@ -1,12 +1,13 @@
 .LiveCasesCards {
     display: flex;
-    padding: 0 1rem;
     box-sizing: border-box;
 }
 
 @media (max-width : 500px ) {
     .LiveCasesCards {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         flex-basis: 100%;
     }
 }

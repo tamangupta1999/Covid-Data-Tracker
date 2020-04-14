@@ -1,18 +1,22 @@
 import React from 'react';
-import classes from'./App.module.css';
+import classes from './App.module.css';
 
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import AppLayout from './hoc/AppLayout/AppLayout';
-import LiveCasesData from './containers/WorldCasesData/WorldCasesData';
+import WorldCasesData from './containers/WorldCasesData/WorldCasesData';
+import FAQ from './components/FAQ/Faq';
 
 
-const App = (props) =>{
+const App = (props) => {
   return (
     <div className={classes.App}>
       <BrowserRouter>
-      <AppLayout>
-       <LiveCasesData />
-      </AppLayout>
+        <AppLayout>
+          <Switch >
+            <Route path="/faq" component={FAQ} />
+            <Route path="/" exact component={WorldCasesData} />
+          </Switch>
+        </AppLayout>
       </BrowserRouter>
     </div>
   );

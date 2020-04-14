@@ -3,7 +3,7 @@ import { select, geoPath, geoMercator, scaleLinear } from "d3";
 import useResizeObserver from './UseResizeObserver';
 
 
-const GeoChart = ({ data }, props) => {
+const GeoChart = ({ data }) => {
     const svgRef = useRef();
     const wrapperRef = useRef();
     const dimensions = useResizeObserver(wrapperRef);
@@ -43,7 +43,7 @@ const GeoChart = ({ data }, props) => {
                 setSelectedCountry(selectedCountry === feature ? null : feature);
             })
             .attr("class", "country")
-            .attr("fill", feature => colorScale(feature.properties['gdp_md_est']))
+            .attr("fill", feature=> colorScale(feature.properties['gdp_md_est']))
             .transition()
             .duration(1000)
             .attr("d", feature => pathGenerator(feature));
@@ -60,7 +60,7 @@ const GeoChart = ({ data }, props) => {
               )
             .attr("x", 15)
             .attr("y", 25);
-
+       
     }, [data, dimensions, selectedCountry])
    
     return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import LiveCasesCard from './WorldCasesCard/LiveDataCard';
-import RatioRecoveryGraph from './RatioRecoveryGraph/RatioRecoveryGraph';
 import UpArrow from './../../assets/Image/Up.svg';
 import DownArrow from './../../assets/Image/Down.svg';
 import TotalCasesGraph from './../../assets/Image/Graph.svg';
@@ -11,9 +10,7 @@ import DeathCasesGraph from './../../assets/Image/Graph3.svg';
 import classes from './WorldCasesCards.module.css'
 
 const liveCasesCards = (props) => {
-    let ratioOfRecoveryCases = (totalCase, recovoredCase) => {
-        return (recovoredCase/totalCase)*100;
-    }
+    
     const numberComma =(res)=> {
         return res.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     }
@@ -39,9 +36,6 @@ const liveCasesCards = (props) => {
                 caseNumber={numberComma(props.totalDeath)}
                 graphPath={DeathCasesGraph}
             />
-            <RatioRecoveryGraph ratioOfRecoveryCases={ratioOfRecoveryCases(+props.totalCases,+props.recovered)}
-            totalCases={+props.totalCases/1000}
-            recovered={+props.recovered/1000} />
         </div>
     )
 }

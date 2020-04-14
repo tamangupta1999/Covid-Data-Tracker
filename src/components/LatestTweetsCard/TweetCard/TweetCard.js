@@ -3,7 +3,7 @@ import classes from './TweetCard.module.css';
 
 const TweetCard = (props) => {
     const { tweetIcon, tweetName, tweetId, tweetData, likeIcon,shareIcon ,likes,share } = props;
-    let trimmedTweetData = function (input, cutlength = 80, appendData = "......") {
+    let trimmedTweetData = function (input, cutlength = 70, appendData = "......") {
         if (input.length <= cutlength)
             return input;
         return input.substr(0, cutlength) + appendData;
