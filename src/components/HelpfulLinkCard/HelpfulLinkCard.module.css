@@ -1,0 +1,23 @@
+.NewsHeading {
+    text-align: center;
+    color: brown;
+    border-bottom: 2px dotted teal;
+    padding-bottom: 15px;
+}
+
+.NewsCard {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media (max-width : 768px ) {
+    .HelpfulLinkCard iframe{
+        display: none;
+    }
+    .NewsCard {
+       flex-direction: column;
+       align-items: center;
+    }
+}

@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import AppLayout from './hoc/AppLayout/AppLayout';
 import WorldCasesData from './containers/WorldCasesData/WorldCasesData';
 import FAQ from './components/FAQ/Faq';
+import HelpfulLink from './containers/HelpfulLink/HelpfulLink';
 
 
 const App = (props) => {
@@ -13,6 +14,7 @@ const App = (props) => {
       <BrowserRouter>
         <AppLayout>
           <Switch >
+            <Route path="/help" component={HelpfulLink} />
             <Route path="/faq" component={FAQ} />
             <Route path="/" exact component={WorldCasesData} />
           </Switch>

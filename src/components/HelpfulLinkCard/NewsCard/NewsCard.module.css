@@ -1,0 +1,39 @@
+.NewsCard {
+    width: 400px;
+    height: auto;
+    box-shadow: 2px 3px 4px #ccc;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+.Heading {
+    text-align: center;
+}
+.NewsPic {
+    width: 100%;
+}
+.Title {
+    padding-bottom: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+.Title:hover {
+    color: coral;
+}
+
+.Content {
+    padding: 5px;
+}
+
+.TimeDate  {
+    color: darkgoldenrod;
+    font-size: 18px ;
+    font-weight: bolder;
+    padding-left: 5px;
+}
+
+@media(max-width : 768px){
+    .NewsCard {
+        width: 95%;
+    }
+}

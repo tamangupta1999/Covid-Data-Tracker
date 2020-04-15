@@ -44,3 +44,10 @@
     text-decoration: none;
     color: black;
 }
+
+
+@media (max-width:768px) {
+    .TweetCard {
+        width: 97%;
+    }
+}

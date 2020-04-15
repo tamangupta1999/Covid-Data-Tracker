@@ -11,7 +11,6 @@ const SpreadTrendCard = (props) => {
     const [graph, setGraph] = useState({});
     const [addFunctionality, setAddFunctionality] = useState({});
 
-
     const onConfirmedHandler = () => {
         let currentDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
         graphData = {

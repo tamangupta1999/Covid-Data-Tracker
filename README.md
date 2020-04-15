@@ -11,3 +11,8 @@ This app tell you live data of corona virus infected people in world as well as 
 4. News&Update Card Components is done. And linked with useful link.
 
 5. Latest Tweet Components is done.
+
+6. FAQ Section is done
+
+7. Helpful Link Component is done with daily top headlines and a frame or youtube video.
+

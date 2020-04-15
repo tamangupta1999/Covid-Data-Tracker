@@ -34,3 +34,10 @@
     width: 189px;
     height: 189px;
 }
+
+@media (max-width:768px) {
+    .RatioRecoveryGraph {
+        width: 97%;
+        margin-bottom: 5px;
+    }
+}

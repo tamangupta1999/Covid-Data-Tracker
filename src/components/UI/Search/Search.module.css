@@ -3,7 +3,6 @@
 }
 .Search {
     position: relative;
-    z-index: 500;
 }
 .Search input[type="text"] {
         width: 95%;

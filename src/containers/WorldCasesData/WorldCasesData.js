@@ -22,7 +22,6 @@ const LiveCasesData = () => {
     const [worldData, setWorldData] = useState([]);
 
     const searchCountry = useCallback((result) => {
-        console.log(result)
         setCountries(result);
     }, [])
 
@@ -45,14 +44,14 @@ const LiveCasesData = () => {
                 setrecovered(response.data.recovered)
                 setactiveCases(response.data.active)
                 settotalDeaths(response.data.deaths)
-                console.log(response)
                 setloading(false)
             }).catch(error => {
                 console.log(error)
             })
     }, [])
     let liveCasesRecord = <Spinner />;
-    let spreadTrend = <Spinner />
+    let spreadTrend = <Spinner />;
+    
     if (!loading) {
         liveCasesRecord = (<WorldCasesCard totalCases={totalCases}
             recovered={recovered}

@@ -21,7 +21,6 @@ const TweetCard = (props) => {
             <div>
                 <img src={likeIcon} alt="likeIcon" /><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className={classes.Likes}>{likes}</a>
                 <img src={shareIcon} alt="shareIcon" /><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className={classes.Likes}>{share}</a>
-
             </div>
         </div>
     )

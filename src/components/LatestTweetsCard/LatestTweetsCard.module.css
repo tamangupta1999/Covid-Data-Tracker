@@ -23,3 +23,9 @@
     width: 21px;
     height: 17px;
 }
+
+@media (max-width:768px) {
+    .LatestTweetsCard {
+        width: 97%;
+    }
+}
