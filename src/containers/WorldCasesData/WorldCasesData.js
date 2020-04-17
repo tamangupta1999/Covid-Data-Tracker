@@ -19,10 +19,13 @@ const LiveCasesData = () => {
     const [totalDeaths, settotalDeaths] = useState(0);
     const [loading, setloading] = useState(true);
     const [countries, setCountries] = useState([]);
-    const [worldData, setWorldData] = useState([]);
+    const [historicalData, setHistoricalData] = useState({});
+    const [allHistoricalData, setAllHistoricalData] = useState([]);
 
-    const searchCountry = useCallback((result) => {
-        setCountries(result);
+
+    const searchCountry = useCallback((countryData) => {
+        setCountries(countryData);
+        console.log(countryData)
     }, [])
 
     let ratioOfRecoveryCases = (totalCase, recovoredCase) => {
@@ -31,15 +34,31 @@ const LiveCasesData = () => {
 
     const countryFullData = (countryName) => {
         settotalCases(countryName.cases);
-        setrecovered(countryName.recovered)
-        setactiveCases(countryName.active)
-        settotalDeaths(countryName.deaths)
+        setrecovered(countryName.recovered);
+        setactiveCases(countryName.active);
+        settotalDeaths(countryName.deaths);
+        console.log(countryName.country);
+        let countryHistoricalData = allHistoricalData.filter(country => country.country === countryName.country);
+        if(countryHistoricalData.length === 0){
+            setHistoricalData({})
+        }else{
+            setHistoricalData(countryHistoricalData[0].timeline)
+        }
+        
     }
 
     useEffect(() => {
-        axios.get('https://corona.lmao.ninja/all')
+        axios.get(`https://corona.lmao.ninja/v2/historical`)
             .then(response => {
-                setWorldData(response.data)
+                setAllHistoricalData(response.data)
+            }).catch(error => {
+                console.log(error.message)
+            })
+    }, [])
+
+    useEffect(() => {
+        axios.get('https://corona.lmao.ninja/v2/all')
+            .then(response => {
                 settotalCases(response.data.cases);
                 setrecovered(response.data.recovered)
                 setactiveCases(response.data.active)
@@ -49,9 +68,20 @@ const LiveCasesData = () => {
                 console.log(error)
             })
     }, [])
+    useEffect(() => {
+        axios.get('https://corona.lmao.ninja/v2/historical/all')
+            .then(response => {
+                setHistoricalData(response.data);
+                setloading(false)
+            }).catch(error => {
+                console.log(error.message)
+            })
+
+    }, [])
+
     let liveCasesRecord = <Spinner />;
     let spreadTrend = <Spinner />;
-    
+
     if (!loading) {
         liveCasesRecord = (<WorldCasesCard totalCases={totalCases}
             recovered={recovered}
@@ -59,11 +89,11 @@ const LiveCasesData = () => {
             totalDeath={totalDeaths} />)
     }
     if (!loading) {
-        spreadTrend = <SpreadTrendCard worldData={worldData} />
+        spreadTrend = <SpreadTrendCard historicalData={historicalData} />
     }
 
     return (
-        <main className={classes.WorldCasesData}>
+        <div className={classes.WorldCasesData}>
             <div className={classes.ContainerOne}>
                 <div className={classes.FirstRow}>
                     {liveCasesRecord}
@@ -86,7 +116,7 @@ const LiveCasesData = () => {
                     recovered={+recovered / 1000} />
                 <LatestTweetsCard />
             </div>
-        </main>
+        </div>
     );
 }
 

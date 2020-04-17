@@ -10,9 +10,9 @@ const SpreadTrendGraph = (props) => {
         <div className={classes.SpreadTrendGraph}>
            <LineChart data={data} width="455px" height="151px"
            colors={props.additionalFun.colors}
-           dataset={{borderWidth: 4}}
+           dataset={{borderWidth: 2}}
            discrete={false}
-           messages={{empty: "Click On Any One Them To Check Trend"}}
+           messages={{empty: "No Data Available For this country"}}
            library={{backgroundColor: "#eee"}}/>
         </div>
     )

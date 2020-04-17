@@ -11,7 +11,28 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
+.LinksCard {
+    width: auto;
+    margin: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 2px 3px 4px #ccc;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    
+}
+.Link {
+    text-decoration: none;
+    padding-left: 20px;
+}
+.Link:hover {
+    color: teal;
+    text-decoration: underline;
+}
+.LinkHeading {
+    color: sandybrown;
+    font-style: italic;
+    text-align: center;
+}
 @media (max-width : 768px ) {
     .HelpfulLinkCard iframe{
         display: none;

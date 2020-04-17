@@ -5,7 +5,7 @@ import Spinner from './../UI/Spinner/Spinner';
 
 
 const CountryDetailCards = (props) => {
-    let countries = props.countries;
+    let {countries} = props;
     let countriesResult = <Spinner />;
     if(Array.isArray(props.countries)){
         if(countries){
