@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 
 .LatestTweetsCard {
+    display: inline-block;
     width: 289px;
     height: 438px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 5px 20px #1425401A;
     border-radius: 8px;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0px 12px;
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
 }
 .TweetHeading {
@@ -28,5 +27,6 @@
 @media (max-width:768px) {
     .LatestTweetsCard {
         width: 97%;
+        overflow: scroll;
     }
 }

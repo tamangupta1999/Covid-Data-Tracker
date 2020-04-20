@@ -24,8 +24,7 @@ const LiveCasesData = () => {
 
 
     const searchCountry = useCallback((countryData) => {
-        setCountries(countryData);
-        console.log(countryData)
+        setCountries(countryData)
     }, [])
 
     let ratioOfRecoveryCases = (totalCase, recovoredCase) => {
@@ -39,17 +38,18 @@ const LiveCasesData = () => {
         settotalDeaths(countryName.deaths);
         console.log(countryName.country);
         let countryHistoricalData = allHistoricalData.filter(country => country.country === countryName.country);
-        if(countryHistoricalData.length === 0){
+        if (countryHistoricalData.length === 0) {
             setHistoricalData({})
-        }else{
+        } else {
             setHistoricalData(countryHistoricalData[0].timeline)
         }
-        
+
     }
 
     useEffect(() => {
         axios.get(`https://corona.lmao.ninja/v2/historical`)
             .then(response => {
+                console.log("history")
                 setAllHistoricalData(response.data)
             }).catch(error => {
                 console.log(error.message)
@@ -76,7 +76,6 @@ const LiveCasesData = () => {
             }).catch(error => {
                 console.log(error.message)
             })
-
     }, [])
 
     let liveCasesRecord = <Spinner />;
